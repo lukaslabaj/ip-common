@@ -63,28 +63,28 @@ static_resources:
                       address: ip-auth
                       port_value: 9090
     - name: ip_portfolio_service
-        connect_timeout: 0.25s
-        type: logical_dns
-        http2_protocol_options: { }
-        lb_policy: round_robin
-        load_assignment:
-          endpoints:
-            - lb_endpoints:
-                - endpoint:
-                    address:
-                      socket_address:
-                        address: ip-portfolio
-                        port_value: 9090
+      connect_timeout: 0.25s
+      type: logical_dns
+      http2_protocol_options: { }
+      lb_policy: round_robin
+      load_assignment:
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: ip-portfolio
+                      port_value: 9090
     - name: ip_market_service
-        connect_timeout: 0.25s
-        type: logical_dns
-        http2_protocol_options: { }
-        lb_policy: round_robin
-        load_assignment:
-          endpoints:
-            - lb_endpoints:
-                - endpoint:
-                    address:
-                      socket_address:
-                        address: ip-market
-                        port_value: 9090
+      connect_timeout: 0.25s
+      type: logical_dns
+      http2_protocol_options: { }
+      lb_policy: round_robin
+      load_assignment:
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: ip-market
+                      port_value: 9090
