@@ -1,4 +1,4 @@
-module ip-common
+module github.com/lukaslabaj/ip-common
 
 go 1.15
 
