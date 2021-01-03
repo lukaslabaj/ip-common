@@ -1,0 +1,92 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: envoy
+  labels:
+    app.kubernetes.io/component: envoy
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: envoy
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: envoy
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: envoy-container
+          image: eu.gcr.io/iportfolio-284814/envoy:{{ .Values.tag }}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 18080
+              protocol: TCP
+              name: https
+            - containerPort: 9901
+              protocol: TCP
+              name: https-admin
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: envoy
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 18080
+      targetPort: 18080
+      protocol: TCP
+      name: https
+    - port: 9901
+      targetPort: 9901
+      protocol: TCP
+      name: https-admin
+  selector:
+    app.kubernetes.io/name: envoy
+    app.kubernetes.io/instance: {{ .Release.Name }}
+
+---
+
+#apiVersion: extensions/v1beta1
+#kind: Ingress
+#metadata:
+#  name: iportfolio
+#  labels:
+#    app.kubernetes.io/managed-by: {{ .Release.Service }}
+#    app.kubernetes.io/instance: {{ .Release.Name }}
+#  annotations:
+#    kubernetes.io/ingress.class: nginx
+#spec:
+#  rules:
+#    - http:
+#        paths:
+#          - path: /
+#            backend:
+#              serviceName: envoy
+#              servicePort: 18080
+#
+#---
+#
+#apiVersion: extensions/v1beta1
+#kind: Ingress
+#metadata:
+#  name: envoy-admin
+#  annotations:
+#    kubernetes.io/ingress.class: nginx
+#spec:
+#  rules:
+#    - host: iportfolio.lukaslabaj
+#      http:
+#        paths:
+#          - path: /
+#            backend:
+#              serviceName: envoy
+#              servicePort: 9901

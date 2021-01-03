@@ -1,0 +1,18 @@
+protoc:
+  version: 3.13.0
+lint:
+  group: uber2
+generate:
+  go_options:
+    import_path: iportfolio
+  plugins:
+    - name: go
+      type: go
+      flags: plugins=grpc
+      output: ../go
+    - name: js
+      flags: import_style=commonjs
+      output: ../js
+    - name: grpc-web
+      flags: import_style=commonjs,mode=grpcwebtext
+      output: ../js
