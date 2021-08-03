@@ -578,6 +578,154 @@ func (x *GetOperationsResponse) GetTotalCount() int32 {
 	return 0
 }
 
+type OperationSum struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Group  string `protobuf:"bytes,1,opt,name=group,proto3" json:"group,omitempty"`
+	Amount int64  `protobuf:"varint,2,opt,name=amount,proto3" json:"amount,omitempty"`
+	Shares int64  `protobuf:"varint,3,opt,name=shares,proto3" json:"shares,omitempty"`
+}
+
+func (x *OperationSum) Reset() {
+	*x = OperationSum{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_porfolio_portfolio_proto_msgTypes[10]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *OperationSum) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*OperationSum) ProtoMessage() {}
+
+func (x *OperationSum) ProtoReflect() protoreflect.Message {
+	mi := &file_porfolio_portfolio_proto_msgTypes[10]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use OperationSum.ProtoReflect.Descriptor instead.
+func (*OperationSum) Descriptor() ([]byte, []int) {
+	return file_porfolio_portfolio_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *OperationSum) GetGroup() string {
+	if x != nil {
+		return x.Group
+	}
+	return ""
+}
+
+func (x *OperationSum) GetAmount() int64 {
+	if x != nil {
+		return x.Amount
+	}
+	return 0
+}
+
+func (x *OperationSum) GetShares() int64 {
+	if x != nil {
+		return x.Shares
+	}
+	return 0
+}
+
+type GetOperationSumRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Query string `protobuf:"bytes,1,opt,name=query,proto3" json:"query,omitempty"`
+}
+
+func (x *GetOperationSumRequest) Reset() {
+	*x = GetOperationSumRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_porfolio_portfolio_proto_msgTypes[11]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetOperationSumRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetOperationSumRequest) ProtoMessage() {}
+
+func (x *GetOperationSumRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_porfolio_portfolio_proto_msgTypes[11]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetOperationSumRequest.ProtoReflect.Descriptor instead.
+func (*GetOperationSumRequest) Descriptor() ([]byte, []int) {
+	return file_porfolio_portfolio_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *GetOperationSumRequest) GetQuery() string {
+	if x != nil {
+		return x.Query
+	}
+	return ""
+}
+
+type GetOperationSumResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *GetOperationSumResponse) Reset() {
+	*x = GetOperationSumResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_porfolio_portfolio_proto_msgTypes[12]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetOperationSumResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetOperationSumResponse) ProtoMessage() {}
+
+func (x *GetOperationSumResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_porfolio_portfolio_proto_msgTypes[12]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetOperationSumResponse.ProtoReflect.Descriptor instead.
+func (*GetOperationSumResponse) Descriptor() ([]byte, []int) {
+	return file_porfolio_portfolio_proto_rawDescGZIP(), []int{12}
+}
+
 // TODO change to generic message key => value pair
 // TODO write generic marshal / unmarshal function
 type GetSummaryResponse_DividendsGroupBy struct {
@@ -592,7 +740,7 @@ type GetSummaryResponse_DividendsGroupBy struct {
 func (x *GetSummaryResponse_DividendsGroupBy) Reset() {
 	*x = GetSummaryResponse_DividendsGroupBy{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_porfolio_portfolio_proto_msgTypes[10]
+		mi := &file_porfolio_portfolio_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -605,7 +753,7 @@ func (x *GetSummaryResponse_DividendsGroupBy) String() string {
 func (*GetSummaryResponse_DividendsGroupBy) ProtoMessage() {}
 
 func (x *GetSummaryResponse_DividendsGroupBy) ProtoReflect() protoreflect.Message {
-	mi := &file_porfolio_portfolio_proto_msgTypes[10]
+	mi := &file_porfolio_portfolio_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -702,28 +850,43 @@ var file_porfolio_portfolio_proto_rawDesc = []byte{
 	0x2e, 0x70, 0x62, 0x2e, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x0a, 0x6f,
 	0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x1f, 0x0a, 0x0b, 0x74, 0x6f, 0x74,
 	0x61, 0x6c, 0x5f, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0a,
-	0x74, 0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x32, 0xaf, 0x02, 0x0a, 0x10, 0x50,
-	0x6f, 0x72, 0x74, 0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
-	0x3b, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x53, 0x75, 0x6d, 0x6d, 0x61, 0x72, 0x79, 0x12, 0x15, 0x2e,
-	0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x53, 0x75, 0x6d, 0x6d, 0x61, 0x72, 0x79, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x53, 0x75, 0x6d,
-	0x6d, 0x61, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x55, 0x0a, 0x12,
-	0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x73, 0x12, 0x1d, 0x2e, 0x70, 0x62, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x54, 0x72,
-	0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x1e, 0x2e, 0x70, 0x62, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x54, 0x72, 0x61,
-	0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x30, 0x01, 0x12, 0x41, 0x0a, 0x0c, 0x47, 0x65, 0x74, 0x50, 0x6f, 0x72, 0x74, 0x66, 0x6f,
-	0x6c, 0x69, 0x6f, 0x12, 0x17, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x6f, 0x72, 0x74,
-	0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x18, 0x2e, 0x70,
-	0x62, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x6f, 0x72, 0x74, 0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x44, 0x0a, 0x0d, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65,
-	0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x18, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74,
-	0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x19, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x11, 0x5a, 0x0f,
-	0x69, 0x70, 0x2d, 0x70, 0x6f, 0x72, 0x74, 0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x2f, 0x70, 0x62, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x22, 0x54, 0x0a, 0x0c, 0x4f, 0x70,
+	0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x75, 0x6d, 0x12, 0x14, 0x0a, 0x05, 0x67, 0x72,
+	0x6f, 0x75, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x67, 0x72, 0x6f, 0x75, 0x70,
+	0x12, 0x16, 0x0a, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x73, 0x68, 0x61, 0x72,
+	0x65, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x73, 0x68, 0x61, 0x72, 0x65, 0x73,
+	0x22, 0x2e, 0x0a, 0x16, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x53, 0x75, 0x6d, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x71, 0x75,
+	0x65, 0x72, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x71, 0x75, 0x65, 0x72, 0x79,
+	0x22, 0x19, 0x0a, 0x17, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x53, 0x75, 0x6d, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x32, 0xfb, 0x02, 0x0a, 0x10,
+	0x50, 0x6f, 0x72, 0x74, 0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x12, 0x3b, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x53, 0x75, 0x6d, 0x6d, 0x61, 0x72, 0x79, 0x12, 0x15,
+	0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x53, 0x75, 0x6d, 0x6d, 0x61, 0x72, 0x79, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x53, 0x75,
+	0x6d, 0x6d, 0x61, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x55, 0x0a,
+	0x12, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69,
+	0x6f, 0x6e, 0x73, 0x12, 0x1d, 0x2e, 0x70, 0x62, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x54,
+	0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x1e, 0x2e, 0x70, 0x62, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x54, 0x72,
+	0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x30, 0x01, 0x12, 0x41, 0x0a, 0x0c, 0x47, 0x65, 0x74, 0x50, 0x6f, 0x72, 0x74, 0x66,
+	0x6f, 0x6c, 0x69, 0x6f, 0x12, 0x17, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x6f, 0x72,
+	0x74, 0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x18, 0x2e,
+	0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x6f, 0x72, 0x74, 0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x44, 0x0a, 0x0d, 0x47, 0x65, 0x74, 0x4f, 0x70,
+	0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x18, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65,
+	0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x19, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x4a, 0x0a,
+	0x0f, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x75, 0x6d,
+	0x12, 0x1a, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x53, 0x75, 0x6d, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1b, 0x2e, 0x70,
+	0x62, 0x2e, 0x47, 0x65, 0x74, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x75,
+	0x6d, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x11, 0x5a, 0x0f, 0x69, 0x70, 0x2d,
+	0x70, 0x6f, 0x72, 0x74, 0x66, 0x6f, 0x6c, 0x69, 0x6f, 0x2f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -738,7 +901,7 @@ func file_porfolio_portfolio_proto_rawDescGZIP() []byte {
 	return file_porfolio_portfolio_proto_rawDescData
 }
 
-var file_porfolio_portfolio_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
+var file_porfolio_portfolio_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_porfolio_portfolio_proto_goTypes = []interface{}{
 	(*GetSummaryRequest)(nil),                   // 0: pb.GetSummaryRequest
 	(*GetSummaryResponse)(nil),                  // 1: pb.GetSummaryResponse
@@ -750,24 +913,29 @@ var file_porfolio_portfolio_proto_goTypes = []interface{}{
 	(*GetOperationsRequest)(nil),                // 7: pb.GetOperationsRequest
 	(*Operation)(nil),                           // 8: pb.Operation
 	(*GetOperationsResponse)(nil),               // 9: pb.GetOperationsResponse
-	(*GetSummaryResponse_DividendsGroupBy)(nil), // 10: pb.GetSummaryResponse.DividendsGroupBy
-	(*timestamp.Timestamp)(nil),                 // 11: google.protobuf.Timestamp
+	(*OperationSum)(nil),                        // 10: pb.OperationSum
+	(*GetOperationSumRequest)(nil),              // 11: pb.GetOperationSumRequest
+	(*GetOperationSumResponse)(nil),             // 12: pb.GetOperationSumResponse
+	(*GetSummaryResponse_DividendsGroupBy)(nil), // 13: pb.GetSummaryResponse.DividendsGroupBy
+	(*timestamp.Timestamp)(nil),                 // 14: google.protobuf.Timestamp
 }
 var file_porfolio_portfolio_proto_depIdxs = []int32{
-	10, // 0: pb.GetSummaryResponse.grouped_dividends:type_name -> pb.GetSummaryResponse.DividendsGroupBy
+	13, // 0: pb.GetSummaryResponse.grouped_dividends:type_name -> pb.GetSummaryResponse.DividendsGroupBy
 	4,  // 1: pb.GetPortfolioResponse.items:type_name -> pb.PortfolioItem
-	11, // 2: pb.Operation.date:type_name -> google.protobuf.Timestamp
+	14, // 2: pb.Operation.date:type_name -> google.protobuf.Timestamp
 	8,  // 3: pb.GetOperationsResponse.operations:type_name -> pb.Operation
 	0,  // 4: pb.PortfolioService.GetSummary:input_type -> pb.GetSummaryRequest
 	2,  // 5: pb.PortfolioService.ImportTransactions:input_type -> pb.ImportTransactionsRequest
 	5,  // 6: pb.PortfolioService.GetPortfolio:input_type -> pb.GetPortfolioRequest
 	7,  // 7: pb.PortfolioService.GetOperations:input_type -> pb.GetOperationsRequest
-	1,  // 8: pb.PortfolioService.GetSummary:output_type -> pb.GetSummaryResponse
-	3,  // 9: pb.PortfolioService.ImportTransactions:output_type -> pb.ImportTransactionsResponse
-	6,  // 10: pb.PortfolioService.GetPortfolio:output_type -> pb.GetPortfolioResponse
-	9,  // 11: pb.PortfolioService.GetOperations:output_type -> pb.GetOperationsResponse
-	8,  // [8:12] is the sub-list for method output_type
-	4,  // [4:8] is the sub-list for method input_type
+	11, // 8: pb.PortfolioService.GetOperationSum:input_type -> pb.GetOperationSumRequest
+	1,  // 9: pb.PortfolioService.GetSummary:output_type -> pb.GetSummaryResponse
+	3,  // 10: pb.PortfolioService.ImportTransactions:output_type -> pb.ImportTransactionsResponse
+	6,  // 11: pb.PortfolioService.GetPortfolio:output_type -> pb.GetPortfolioResponse
+	9,  // 12: pb.PortfolioService.GetOperations:output_type -> pb.GetOperationsResponse
+	12, // 13: pb.PortfolioService.GetOperationSum:output_type -> pb.GetOperationSumResponse
+	9,  // [9:14] is the sub-list for method output_type
+	4,  // [4:9] is the sub-list for method input_type
 	4,  // [4:4] is the sub-list for extension type_name
 	4,  // [4:4] is the sub-list for extension extendee
 	0,  // [0:4] is the sub-list for field type_name
@@ -900,6 +1068,42 @@ func file_porfolio_portfolio_proto_init() {
 			}
 		}
 		file_porfolio_portfolio_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*OperationSum); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_porfolio_portfolio_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetOperationSumRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_porfolio_portfolio_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetOperationSumResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_porfolio_portfolio_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetSummaryResponse_DividendsGroupBy); i {
 			case 0:
 				return &v.state
@@ -918,7 +1122,7 @@ func file_porfolio_portfolio_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_porfolio_portfolio_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   11,
+			NumMessages:   14,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -948,6 +1152,7 @@ type PortfolioServiceClient interface {
 	ImportTransactions(ctx context.Context, in *ImportTransactionsRequest, opts ...grpc.CallOption) (PortfolioService_ImportTransactionsClient, error)
 	GetPortfolio(ctx context.Context, in *GetPortfolioRequest, opts ...grpc.CallOption) (*GetPortfolioResponse, error)
 	GetOperations(ctx context.Context, in *GetOperationsRequest, opts ...grpc.CallOption) (*GetOperationsResponse, error)
+	GetOperationSum(ctx context.Context, in *GetOperationSumRequest, opts ...grpc.CallOption) (*GetOperationSumResponse, error)
 }
 
 type portfolioServiceClient struct {
@@ -1017,12 +1222,22 @@ func (c *portfolioServiceClient) GetOperations(ctx context.Context, in *GetOpera
 	return out, nil
 }
 
+func (c *portfolioServiceClient) GetOperationSum(ctx context.Context, in *GetOperationSumRequest, opts ...grpc.CallOption) (*GetOperationSumResponse, error) {
+	out := new(GetOperationSumResponse)
+	err := c.cc.Invoke(ctx, "/pb.PortfolioService/GetOperationSum", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // PortfolioServiceServer is the server API for PortfolioService service.
 type PortfolioServiceServer interface {
 	GetSummary(context.Context, *GetSummaryRequest) (*GetSummaryResponse, error)
 	ImportTransactions(*ImportTransactionsRequest, PortfolioService_ImportTransactionsServer) error
 	GetPortfolio(context.Context, *GetPortfolioRequest) (*GetPortfolioResponse, error)
 	GetOperations(context.Context, *GetOperationsRequest) (*GetOperationsResponse, error)
+	GetOperationSum(context.Context, *GetOperationSumRequest) (*GetOperationSumResponse, error)
 }
 
 // UnimplementedPortfolioServiceServer can be embedded to have forward compatible implementations.
@@ -1040,6 +1255,9 @@ func (*UnimplementedPortfolioServiceServer) GetPortfolio(context.Context, *GetPo
 }
 func (*UnimplementedPortfolioServiceServer) GetOperations(context.Context, *GetOperationsRequest) (*GetOperationsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetOperations not implemented")
+}
+func (*UnimplementedPortfolioServiceServer) GetOperationSum(context.Context, *GetOperationSumRequest) (*GetOperationSumResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetOperationSum not implemented")
 }
 
 func RegisterPortfolioServiceServer(s *grpc.Server, srv PortfolioServiceServer) {
@@ -1121,6 +1339,24 @@ func _PortfolioService_GetOperations_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _PortfolioService_GetOperationSum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetOperationSumRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PortfolioServiceServer).GetOperationSum(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pb.PortfolioService/GetOperationSum",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PortfolioServiceServer).GetOperationSum(ctx, req.(*GetOperationSumRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _PortfolioService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "pb.PortfolioService",
 	HandlerType: (*PortfolioServiceServer)(nil),
@@ -1136,6 +1372,10 @@ var _PortfolioService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetOperations",
 			Handler:    _PortfolioService_GetOperations_Handler,
+		},
+		{
+			MethodName: "GetOperationSum",
+			Handler:    _PortfolioService_GetOperationSum_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

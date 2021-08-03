@@ -1,6 +1,8 @@
 FROM envoyproxy/envoy:v1.15.0
 
-COPY envoy.yaml /etc/envoy/envoy.yaml
+ARG ENVOY_CONFIG=envoy.yaml
+
+COPY $ENVOY_CONFIG /etc/envoy/envoy.yaml
 
 EXPOSE 18080
 EXPOSE 9901

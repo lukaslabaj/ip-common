@@ -1,0 +1,26 @@
+version: '3'
+services:
+  ip-portfolio:
+    build:
+      context: ../ip-portfolio/
+      dockerfile: ./Dockerfile
+    image: ip-portfolio/ip-portfolio
+    ports:
+      - "9090:9090"
+#  ip-auth:
+#    build:
+#      context: ../ip-auth/
+#      dockerfile: ./Dockerfile
+#    image: ip-portfolio/ip-auth
+#    ports:
+#      - "9091:9091"
+  envoy:
+    build:
+      context: ./envoy/
+      dockerfile: ./Dockerfile
+    image: ip-portfolio/envoy
+    ports:
+      - "18080:18080"
+      - "9901:9901"
+    links:
+      - ip-portfolio

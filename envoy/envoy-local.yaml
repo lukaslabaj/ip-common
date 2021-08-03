@@ -32,14 +32,13 @@ static_resources:
                           route:
                             cluster: ip_auth_service
                             max_grpc_timeout: 0s
-                        - match: { prefix: "/pb.PortfolioService"  }
+                        - match: { prefix: "/pb.PortfolioService" }
                           route:
                             cluster: ip_portfolio_service
                             max_grpc_timeout: 0s
                         - match: { prefix: "/pb.MarketService" }
                           route:
                             cluster: ip_market_service
-                            max_grpc_timeout: 0s
                       cors:
                         allow_origin_string_match:
                           - prefix: "*"
@@ -53,7 +52,7 @@ static_resources:
                   - name: envoy.filters.http.router
   clusters:
     - name: ip_auth_service
-      connect_timeout: 10.25s
+      connect_timeout: 0.25s
       type: logical_dns
       http2_protocol_options: {}
       lb_policy: round_robin
@@ -67,7 +66,7 @@ static_resources:
                       address: ip-auth
                       port_value: 9090
     - name: ip_portfolio_service
-      connect_timeout: 10.25s
+      connect_timeout: 0.25s
       type: logical_dns
       http2_protocol_options: { }
       lb_policy: round_robin
@@ -78,10 +77,10 @@ static_resources:
               - endpoint:
                   address:
                     socket_address:
-                      address: ip-portfolio
+                      address: host.docker.internal
                       port_value: 9090
     - name: ip_market_service
-      connect_timeout: 10.25s
+      connect_timeout: 0.25s
       type: logical_dns
       http2_protocol_options: { }
       lb_policy: round_robin

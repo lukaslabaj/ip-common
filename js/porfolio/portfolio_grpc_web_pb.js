@@ -387,5 +387,85 @@ proto.pb.PortfolioServicePromiseClient.prototype.getOperations =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.pb.GetOperationSumRequest,
+ *   !proto.pb.GetOperationSumResponse>}
+ */
+const methodDescriptor_PortfolioService_GetOperationSum = new grpc.web.MethodDescriptor(
+  '/pb.PortfolioService/GetOperationSum',
+  grpc.web.MethodType.UNARY,
+  proto.pb.GetOperationSumRequest,
+  proto.pb.GetOperationSumResponse,
+  /**
+   * @param {!proto.pb.GetOperationSumRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.pb.GetOperationSumResponse.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.pb.GetOperationSumRequest,
+ *   !proto.pb.GetOperationSumResponse>}
+ */
+const methodInfo_PortfolioService_GetOperationSum = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.pb.GetOperationSumResponse,
+  /**
+   * @param {!proto.pb.GetOperationSumRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.pb.GetOperationSumResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.pb.GetOperationSumRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.pb.GetOperationSumResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.pb.GetOperationSumResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.pb.PortfolioServiceClient.prototype.getOperationSum =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/pb.PortfolioService/GetOperationSum',
+      request,
+      metadata || {},
+      methodDescriptor_PortfolioService_GetOperationSum,
+      callback);
+};
+
+
+/**
+ * @param {!proto.pb.GetOperationSumRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.pb.GetOperationSumResponse>}
+ *     Promise that resolves to the response
+ */
+proto.pb.PortfolioServicePromiseClient.prototype.getOperationSum =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/pb.PortfolioService/GetOperationSum',
+      request,
+      metadata || {},
+      methodDescriptor_PortfolioService_GetOperationSum);
+};
+
+
 module.exports = proto.pb;
 

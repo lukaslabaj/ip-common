@@ -8,6 +8,6 @@ install:
 proto-gen:
 	@PATH=$(PATH):$(PWD)/tools/protoc/bin \
 	prototool generate $(PROTO_DIR)
-	cp -R $(PWD)/go/ $(PWD)/..
-	cp -R $(PWD)/go/ip-auth/ $(PWD)/../ip-portfolio
 	cp -R $(PWD)/js/ $(PWD)/../ip-frontend/proto
+	#cp -R $(PWD)/go/ $(PWD)/..
+	#cp -R $(PWD)/go/ip-auth/ $(PWD)/../ip-portfolio
