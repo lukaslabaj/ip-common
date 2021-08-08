@@ -79,7 +79,7 @@ static_resources:
                   address:
                     socket_address:
                       address: ip-portfolio
-                      port_value: 9090
+                      port_value: 9091
     - name: ip_market_service
       connect_timeout: 10.25s
       type: logical_dns
@@ -93,4 +93,4 @@ static_resources:
                   address:
                     socket_address:
                       address: ip-market
-                      port_value: 9090
+                      port_value: 9092

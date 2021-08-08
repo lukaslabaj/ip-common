@@ -1,19 +1,33 @@
 version: '3'
 services:
+  ip-auth:
+    build:
+      context: ../ip-auth/
+      dockerfile: ./Dockerfile
+      args:
+        GRPC_PORT: 9090
+    image: ip-portfolio/ip-auth
+    ports:
+      - "9090:9090"
   ip-portfolio:
     build:
       context: ../ip-portfolio/
       dockerfile: ./Dockerfile
+      args:
+        GRPC_PORT : 9091
     image: ip-portfolio/ip-portfolio
     ports:
-      - "9090:9090"
-#  ip-auth:
-#    build:
-#      context: ../ip-auth/
-#      dockerfile: ./Dockerfile
-#    image: ip-portfolio/ip-auth
-#    ports:
-#      - "9091:9091"
+      - "9091:9091"
+  ip-market:
+    build:
+      context: ../ip-market/
+      dockerfile: ./Dockerfile
+      args:
+        GRPC_PORT: 9092
+        DB_PSQL_URL : psql://agxqnsqk:WbxNOoVrHjQAhasYVFPfJFPPWMbiAvIi@hattie.db.elephantsql.com:5432/agxqnsqk
+    image: ip-portfolio/ip-market
+    ports:
+      - "9092:9092"
   envoy:
     build:
       context: ./envoy/
@@ -23,4 +37,6 @@ services:
       - "18080:18080"
       - "9901:9901"
     links:
+      - ip-auth
       - ip-portfolio
+      - ip-market
