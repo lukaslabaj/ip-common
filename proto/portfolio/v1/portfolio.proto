@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package portfolio.v1;
+
+import "google/protobuf/timestamp.proto";
+//import "google/protobuf/empty.proto";
+
+import "shared/filter.proto";
+import "shared/portfolio_item.proto";
+
+service PortfolioService {
+  rpc GetSummary(GetSummaryRequest) returns (GetSummaryResponse);
+  rpc ImportTransactions(ImportTransactionsRequest) returns (stream ImportTransactionsResponse);
+  rpc GetPortfolio(GetPortfolioRequest) returns (GetPortfolioResponse);
+  rpc GetOperations(GetOperationsRequest) returns (GetOperationsResponse);
+
+  rpc GetOperationSum(GetOperationSumRequest) returns (GetOperationSumResponse);
+}
+
+message GetSummaryRequest {}
+
+message GetSummaryResponse {
+  // TODO change to generic message key => value pair
+  // TODO write generic marshal / unmarshal function
+  message DividendsGroupBy {
+    string category = 1;
+    int64 value = 2;
+  }
+
+  int64 invested = 1;
+  int64 dividends = 2;
+  int64 realized_gain = 3;
+  repeated DividendsGroupBy grouped_dividends = 4;
+}
+
+message ImportTransactionsRequest {
+
+}
+
+message ImportTransactionsResponse {
+  string log_message = 1;
+}
+
+message GetPortfolioRequest {}
+
+message GetPortfolioResponse {
+  repeated shared.PortfolioItem items = 1;
+}
+
+message GetOperationsRequest {
+  // Paginator
+  int32 offset = 1;
+  int32 limit = 2;
+}
+
+message Operation {
+  google.protobuf.Timestamp date = 1;
+  string operation = 2;
+  string broker = 3;
+  string broker_position_id = 4;
+  string symbol = 5;
+  int64 amount = 6;
+  int64 units = 7;
+}
+
+message GetOperationsResponse {
+  repeated Operation operations = 1;
+  int32 total_count = 2;
+}
+
+message OperationSum {
+  string group = 1;
+  int64 amount = 2;
+  int64 shares = 3;
+}
+
+message GetOperationSumRequest {
+  string query = 1;
+  shared.Filter filter = 2;
+}
+
+message GetOperationSumResponse {
+    repeated OperationSum items = 1;
+}
+

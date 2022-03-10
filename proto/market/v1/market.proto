@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package market.v1;
+
+import "shared/portfolio_item.proto";
+
+service MarketService {
+  rpc AddSecurity(AddSecurityRequest) returns (AddSecurityResponse);
+  rpc GetSectorDistribution(GetSectorDistributionRequest) returns (GetSectorDistributionResponse);
+}
+
+message AddSecurityRequest {
+  string symbol = 1;
+}
+
+message AddSecurityResponse {
+  string err = 1;
+}
+
+message GetSectorDistributionRequest {
+  repeated shared.PortfolioItem portfolio = 1;
+}
+
+message GetSectorDistributionResponse {
+  string err = 1;
+  repeated SectorDistributionItem distribution = 2;
+}
+
+message SectorDistributionItem {
+  string sector = 1;
+  int64 amount = 2;
+  int64 percent = 3;
+}
+
+enum Sector {
+  UNKNOWN = 0;
+}

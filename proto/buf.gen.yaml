@@ -1,0 +1,47 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: ip/proto
+plugins:
+#  - remote: buf.build/library/plugins/go:v1.27.1-1
+#    out: gen/proto/go
+#    opt: paths=source_relative
+#  - remote: buf.build/library/plugins/go-grpc:v1.1.0-2
+#    out: gen/proto/go
+#    opt:
+#      - paths=source_relative
+#      - require_unimplemented_servers=false
+
+# GRPC - GO
+  - name: go-grpc
+    out: ../gen/proto/go
+    opt:
+      - paths=source_relative
+    strategy: directory
+
+# GO
+  - name: go
+    out: ../gen/proto/go
+    opt:
+      - paths=source_relative
+    strategy: directory
+
+# JS
+  - name: js
+    out: ../gen/proto/js
+    opt:
+      - import_style=commonjs,binary
+    strategy: directory
+
+# GRPC-Web
+  - name: grpc-web
+    out: ../gen/proto/js
+    opt:
+      - import_style=commonjs,mode=grpcwebtext
+    strategy: directory
+
+# Dart - maybe using later for mobile app
+#  - name: dart
+#    out: gen/proto/dart
+#    opt: grpc

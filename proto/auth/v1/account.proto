@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package auth.v1;
+
+service AuthService {
+  rpc SignInOAuth(SignInOAuthRequest) returns (SignInOAuthResponse);
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
+
+enum Provider {
+  INVALID = 0;
+  GOOGLE = 1;
+}
+
+message SignInOAuthRequest {
+  string code = 1;
+  Provider provider = 2;
+}
+
+message SignInOAuthResponse {
+  string token = 1;
+}
+
+message GetUserRequest {
+  string email = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+message User {
+  int64 id = 1;
+  int64 create_time = 2;
+  string email = 3;
+  string first_name = 4;
+  string last_name = 5;
+}
+
+

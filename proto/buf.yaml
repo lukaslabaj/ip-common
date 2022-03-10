@@ -1,0 +1,13 @@
+version: v1
+lint:
+  use:
+    - DEFAULT
+  except:
+    - ENUM_VALUE_PREFIX
+    - ENUM_ZERO_VALUE_SUFFIX
+  ignore_only:
+    PACKAGE_VERSION_SUFFIX:
+      - shared
+breaking:
+  use:
+    - FILE

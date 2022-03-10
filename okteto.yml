@@ -1,0 +1,11 @@
+name: envoy
+selector:
+  app.kubernetes.io/component: envoy
+image: okteto/node:14
+command: bash
+sync:
+- .:/usr/src/app
+forward:
+- 9229:9229
+- 18080:18080
+- 9901:9901
