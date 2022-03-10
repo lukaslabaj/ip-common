@@ -8,30 +8,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="add doc about accessing go module from private repository">
-      <change afterPath="$PROJECT_DIR$/proto/buf.gen.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proto/shared/filter.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proto/shared/portfolio_item.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/mk_proto_files.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/protoc/bin/protoc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/protoc/bin/protoc-gen-go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/protoc/bin/protoc-gen-go-grpc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="migrate to 'buf' proto generator">
+      <change beforePath="$PROJECT_DIR$/.idea/ip-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ip-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go/ip-auth/pb/account.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go/ip-market/pb/market.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go/ip-portfolio/pb/portfolio.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/auth/account_grpc_web_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/auth/account_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/market/market_grpc_web_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/market/market_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/porfolio/portfolio_grpc_web_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/porfolio/portfolio_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/auth/account.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/auth/v1/account.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/market/market.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/market/v1/market.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/porfolio/portfolio.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +183,8 @@
     <MESSAGE value="docker compose" />
     <MESSAGE value="local docker compose help" />
     <MESSAGE value="add doc about accessing go module from private repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="add doc about accessing go module from private repository" />
+    <MESSAGE value="migrate to 'buf' proto generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="migrate to 'buf' proto generator" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
