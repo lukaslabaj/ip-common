@@ -8,11 +8,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="migrate to 'buf' proto generator">
-      <change beforePath="$PROJECT_DIR$/.idea/ip-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ip-common.iml" afterDir="false" />
+    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="fixed go.mod">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/auth/v1/account.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/auth/v1/account.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/shared/portfolio_item.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/shared/portfolio_item.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/buf.gen.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/proto/buf.gen.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +31,12 @@
   </component>
   <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -39,11 +48,17 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/proto/shared/portfolio_item.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Makefile" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto/prototool.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto/buf.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/proto/auth/v1/account.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/proto/buf.gen.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tools/mk_proto_files.sh" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JupyterTrust" id="0564b1d9-8c49-4e62-b02c-8aac88333c81" />
   <component name="MarkdownSettingsMigration">
@@ -184,7 +199,8 @@
     <MESSAGE value="local docker compose help" />
     <MESSAGE value="add doc about accessing go module from private repository" />
     <MESSAGE value="migrate to 'buf' proto generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="migrate to 'buf' proto generator" />
+    <MESSAGE value="fixed go.mod" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed go.mod" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
