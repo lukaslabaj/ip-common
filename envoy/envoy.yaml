@@ -28,15 +28,15 @@ static_resources:
                             body:
                               inline_string: 'ok'
                             status: 200
-                        - match: { prefix: "/pb.AuthService" }
+                        - match: { prefix: "/portfolio.v1.AuthService" }
                           route:
                             cluster: ip_auth_service
                             max_grpc_timeout: 0s
-                        - match: { prefix: "/pb.PortfolioService"  }
+                        - match: { prefix: "/portfolio.v1.PortfolioService"  }
                           route:
                             cluster: ip_portfolio_service
                             max_grpc_timeout: 0s
-                        - match: { prefix: "/pb.MarketService" }
+                        - match: { prefix: "/portfolio.v1.MarketService" }
                           route:
                             cluster: ip_market_service
                             max_grpc_timeout: 0s

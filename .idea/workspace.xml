@@ -8,14 +8,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="fixed go.mod">
+    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="fixed import path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/auth/v1/account.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/auth/v1/account.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/shared/portfolio_item.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/shared/portfolio_item.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/buf.gen.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/proto/buf.gen.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/envoy/envoy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/envoy/envoy.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +28,8 @@
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
       <GitPushTagMode>
-        <option name="argument" value="--follow-tags" />
-        <option name="title" value="Current Branch" />
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/proto/buf.gen.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tools/mk_proto_files.sh" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JupyterTrust" id="0564b1d9-8c49-4e62-b02c-8aac88333c81" />
@@ -115,12 +111,13 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
+    <option name="COLUMN_ID_ORDER">
       <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
       </list>
     </option>
   </component>
@@ -200,7 +197,8 @@
     <MESSAGE value="add doc about accessing go module from private repository" />
     <MESSAGE value="migrate to 'buf' proto generator" />
     <MESSAGE value="fixed go.mod" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed go.mod" />
+    <MESSAGE value="fixed import path" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed import path" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
