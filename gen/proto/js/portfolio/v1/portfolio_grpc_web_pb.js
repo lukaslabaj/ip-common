@@ -21,6 +21,8 @@ var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/time
 var shared_filter_pb = require('../../shared/filter_pb.js')
 
 var shared_portfolio_item_pb = require('../../shared/portfolio_item_pb.js')
+
+var shared_time_precision_pb = require('../../shared/time_precision_pb.js')
 const proto = {};
 proto.portfolio = {};
 proto.portfolio.v1 = require('./portfolio_pb.js');

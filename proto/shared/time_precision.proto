@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package shared;
+
+//option (proto.patch.go.lint).all = true;
+
+enum TimePrecision {
+  TIME_PRECISION_UNSPECIFIED = 0;
+  TIME_PRECISION_DAY = 1;
+  TIME_PRECISION_WEEK = 2;
+  TIME_PRECISION_MONTH = 3;
+  TIME_PRECISION_QUARTER = 4;
+  TIME_PRECISION_YEAR = 5;
+  TIME_PRECISION_DECADE = 6;
+}

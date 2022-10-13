@@ -7,6 +7,7 @@ import "google/protobuf/timestamp.proto";
 
 import "shared/filter.proto";
 import "shared/portfolio_item.proto";
+import "shared/time_precision.proto";
 
 service PortfolioService {
   rpc GetSummary(GetSummaryRequest) returns (GetSummaryResponse);
@@ -75,7 +76,7 @@ message OperationSum {
 }
 
 message GetOperationSumRequest {
-  string query = 1;
+  shared.TimePrecision time_precision = 1;
   shared.Filter filter = 2;
 }
 

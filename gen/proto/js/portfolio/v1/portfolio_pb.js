@@ -27,6 +27,8 @@ var shared_filter_pb = require('../../shared/filter_pb.js');
 goog.object.extend(proto, shared_filter_pb);
 var shared_portfolio_item_pb = require('../../shared/portfolio_item_pb.js');
 goog.object.extend(proto, shared_portfolio_item_pb);
+var shared_time_precision_pb = require('../../shared/time_precision_pb.js');
+goog.object.extend(proto, shared_time_precision_pb);
 goog.exportSymbol('proto.portfolio.v1.GetOperationSumRequest', null, global);
 goog.exportSymbol('proto.portfolio.v1.GetOperationSumResponse', null, global);
 goog.exportSymbol('proto.portfolio.v1.GetOperationsRequest', null, global);
@@ -2219,7 +2221,7 @@ proto.portfolio.v1.GetOperationSumRequest.prototype.toObject = function(opt_incl
  */
 proto.portfolio.v1.GetOperationSumRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    query: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    timePrecision: jspb.Message.getFieldWithDefault(msg, 1, 0),
     filter: (f = msg.getFilter()) && shared_filter_pb.Filter.toObject(includeInstance, f)
   };
 
@@ -2258,8 +2260,8 @@ proto.portfolio.v1.GetOperationSumRequest.deserializeBinaryFromReader = function
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setQuery(value);
+      var value = /** @type {!proto.shared.TimePrecision} */ (reader.readEnum());
+      msg.setTimePrecision(value);
       break;
     case 2:
       var value = new shared_filter_pb.Filter;
@@ -2295,9 +2297,9 @@ proto.portfolio.v1.GetOperationSumRequest.prototype.serializeBinary = function()
  */
 proto.portfolio.v1.GetOperationSumRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getQuery();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getTimePrecision();
+  if (f !== 0.0) {
+    writer.writeEnum(
       1,
       f
     );
@@ -2314,20 +2316,20 @@ proto.portfolio.v1.GetOperationSumRequest.serializeBinaryToWriter = function(mes
 
 
 /**
- * optional string query = 1;
- * @return {string}
+ * optional shared.TimePrecision time_precision = 1;
+ * @return {!proto.shared.TimePrecision}
  */
-proto.portfolio.v1.GetOperationSumRequest.prototype.getQuery = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.portfolio.v1.GetOperationSumRequest.prototype.getTimePrecision = function() {
+  return /** @type {!proto.shared.TimePrecision} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {!proto.shared.TimePrecision} value
  * @return {!proto.portfolio.v1.GetOperationSumRequest} returns this
  */
-proto.portfolio.v1.GetOperationSumRequest.prototype.setQuery = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+proto.portfolio.v1.GetOperationSumRequest.prototype.setTimePrecision = function(value) {
+  return jspb.Message.setProto3EnumField(this, 1, value);
 };
 
 
