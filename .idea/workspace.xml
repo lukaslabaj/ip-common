@@ -8,9 +8,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="fixed import path">
+    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="added time precision to sum request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/envoy/envoy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/envoy/envoy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_pb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,18 +45,21 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/proto/shared/portfolio_item.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Makefile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/proto/prototool.yaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/proto/buf.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto/auth/v1/account.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto/buf.gen.yaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/proto/buf.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/proto/prototool.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/proto/shared/portfolio_item.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tools/mk_proto_files.sh" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JupyterTrust" id="0564b1d9-8c49-4e62-b02c-8aac88333c81" />
@@ -71,30 +77,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="go.format.on.save.advertiser.fired" value="true" />
-    <property name="go.formatter.settings.were.checked" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools/protoc/bin" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lukaslabaj/IdeaProjects/ip-common/proto/shared&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/proto/shared" />
       <recent name="$PROJECT_DIR$/tools/protoc/bin" />
       <recent name="$PROJECT_DIR$/proto/porfolio" />
-      <recent name="$PROJECT_DIR$/proto/shared" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/envoy" />
     </key>
@@ -105,6 +107,19 @@
       <recent name="$PROJECT_DIR$/proto" />
       <recent name="$PROJECT_DIR$/proto/porfolio" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="proto-gen" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="proto-gen" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.proto-gen" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,9 +213,11 @@
     <MESSAGE value="migrate to 'buf' proto generator" />
     <MESSAGE value="fixed go.mod" />
     <MESSAGE value="fixed import path" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed import path" />
+    <MESSAGE value="update proto service paths" />
+    <MESSAGE value="added time precision to sum request" />
+    <option name="LAST_COMMIT_MESSAGE" value="added time precision to sum request" />
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

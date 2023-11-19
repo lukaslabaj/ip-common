@@ -21,17 +21,9 @@ service PortfolioService {
 message GetSummaryRequest {}
 
 message GetSummaryResponse {
-  // TODO change to generic message key => value pair
-  // TODO write generic marshal / unmarshal function
-  message DividendsGroupBy {
-    string category = 1;
-    int64 value = 2;
-  }
-
   int64 invested = 1;
   int64 dividends = 2;
   int64 realized_gain = 3;
-  repeated DividendsGroupBy grouped_dividends = 4;
 }
 
 message ImportTransactionsRequest {
