@@ -71,9 +71,12 @@ spec:
     - http:
         paths:
           - path: /
+            pathType: Prefix
             backend:
-              serviceName: envoy
-              servicePort: 18080
+              service:
+                name: envoy
+                port:
+                  number: 18080
 
 ---
 
@@ -91,6 +94,9 @@ spec:
     - http:
         paths:
           - path: /
+            pathType: Prefix
             backend:
-              serviceName: envoy
-              servicePort: 9901
+              service:
+                name: envoy
+                port:
+                  number: 9901
