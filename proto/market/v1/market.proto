@@ -7,6 +7,7 @@ import "shared/portfolio_item.proto";
 service MarketService {
   rpc AddSecurity(AddSecurityRequest) returns (AddSecurityResponse);
   rpc GetSectorDistribution(GetSectorDistributionRequest) returns (GetSectorDistributionResponse);
+  rpc ProcessAllSecurities(ProcessAllSecuritiesRequest) returns (ProcessAllSecuritiesResponse);
 }
 
 message AddSecurityRequest {
@@ -34,4 +35,10 @@ message SectorDistributionItem {
 
 enum Sector {
   UNKNOWN = 0;
+}
+
+message ProcessAllSecuritiesRequest {
+}
+message ProcessAllSecuritiesResponse {
+  string err = 1;
 }

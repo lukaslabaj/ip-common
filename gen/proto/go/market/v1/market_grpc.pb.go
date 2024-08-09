@@ -24,6 +24,7 @@ const _ = grpc.SupportPackageIsVersion7
 type MarketServiceClient interface {
 	AddSecurity(ctx context.Context, in *AddSecurityRequest, opts ...grpc.CallOption) (*AddSecurityResponse, error)
 	GetSectorDistribution(ctx context.Context, in *GetSectorDistributionRequest, opts ...grpc.CallOption) (*GetSectorDistributionResponse, error)
+	ProcessAllSecurities(ctx context.Context, in *ProcessAllSecuritiesRequest, opts ...grpc.CallOption) (*ProcessAllSecuritiesResponse, error)
 }
 
 type marketServiceClient struct {
@@ -52,12 +53,22 @@ func (c *marketServiceClient) GetSectorDistribution(ctx context.Context, in *Get
 	return out, nil
 }
 
+func (c *marketServiceClient) ProcessAllSecurities(ctx context.Context, in *ProcessAllSecuritiesRequest, opts ...grpc.CallOption) (*ProcessAllSecuritiesResponse, error) {
+	out := new(ProcessAllSecuritiesResponse)
+	err := c.cc.Invoke(ctx, "/market.v1.MarketService/ProcessAllSecurities", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MarketServiceServer is the server API for MarketService service.
 // All implementations must embed UnimplementedMarketServiceServer
 // for forward compatibility
 type MarketServiceServer interface {
 	AddSecurity(context.Context, *AddSecurityRequest) (*AddSecurityResponse, error)
 	GetSectorDistribution(context.Context, *GetSectorDistributionRequest) (*GetSectorDistributionResponse, error)
+	ProcessAllSecurities(context.Context, *ProcessAllSecuritiesRequest) (*ProcessAllSecuritiesResponse, error)
 	mustEmbedUnimplementedMarketServiceServer()
 }
 
@@ -70,6 +81,9 @@ func (UnimplementedMarketServiceServer) AddSecurity(context.Context, *AddSecurit
 }
 func (UnimplementedMarketServiceServer) GetSectorDistribution(context.Context, *GetSectorDistributionRequest) (*GetSectorDistributionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSectorDistribution not implemented")
+}
+func (UnimplementedMarketServiceServer) ProcessAllSecurities(context.Context, *ProcessAllSecuritiesRequest) (*ProcessAllSecuritiesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProcessAllSecurities not implemented")
 }
 func (UnimplementedMarketServiceServer) mustEmbedUnimplementedMarketServiceServer() {}
 
@@ -120,6 +134,24 @@ func _MarketService_GetSectorDistribution_Handler(srv interface{}, ctx context.C
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MarketService_ProcessAllSecurities_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProcessAllSecuritiesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MarketServiceServer).ProcessAllSecurities(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/market.v1.MarketService/ProcessAllSecurities",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MarketServiceServer).ProcessAllSecurities(ctx, req.(*ProcessAllSecuritiesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MarketService_ServiceDesc is the grpc.ServiceDesc for MarketService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -134,6 +166,10 @@ var MarketService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetSectorDistribution",
 			Handler:    _MarketService_GetSectorDistribution_Handler,
+		},
+		{
+			MethodName: "ProcessAllSecurities",
+			Handler:    _MarketService_ProcessAllSecurities_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -233,5 +233,85 @@ proto.market.v1.MarketServicePromiseClient.prototype.getSectorDistribution =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.market.v1.ProcessAllSecuritiesRequest,
+ *   !proto.market.v1.ProcessAllSecuritiesResponse>}
+ */
+const methodDescriptor_MarketService_ProcessAllSecurities = new grpc.web.MethodDescriptor(
+  '/market.v1.MarketService/ProcessAllSecurities',
+  grpc.web.MethodType.UNARY,
+  proto.market.v1.ProcessAllSecuritiesRequest,
+  proto.market.v1.ProcessAllSecuritiesResponse,
+  /**
+   * @param {!proto.market.v1.ProcessAllSecuritiesRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.market.v1.ProcessAllSecuritiesResponse.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.market.v1.ProcessAllSecuritiesRequest,
+ *   !proto.market.v1.ProcessAllSecuritiesResponse>}
+ */
+const methodInfo_MarketService_ProcessAllSecurities = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.market.v1.ProcessAllSecuritiesResponse,
+  /**
+   * @param {!proto.market.v1.ProcessAllSecuritiesRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.market.v1.ProcessAllSecuritiesResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.market.v1.ProcessAllSecuritiesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.market.v1.ProcessAllSecuritiesResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.market.v1.ProcessAllSecuritiesResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.market.v1.MarketServiceClient.prototype.processAllSecurities =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/market.v1.MarketService/ProcessAllSecurities',
+      request,
+      metadata || {},
+      methodDescriptor_MarketService_ProcessAllSecurities,
+      callback);
+};
+
+
+/**
+ * @param {!proto.market.v1.ProcessAllSecuritiesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.market.v1.ProcessAllSecuritiesResponse>}
+ *     Promise that resolves to the response
+ */
+proto.market.v1.MarketServicePromiseClient.prototype.processAllSecurities =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/market.v1.MarketService/ProcessAllSecurities',
+      request,
+      metadata || {},
+      methodDescriptor_MarketService_ProcessAllSecurities);
+};
+
+
 module.exports = proto.market.v1;
 
