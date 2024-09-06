@@ -10,6 +10,7 @@ service MarketService {
   rpc ProcessAllSecurities(ProcessAllSecuritiesRequest) returns (ProcessAllSecuritiesResponse);
 }
 
+
 message AddSecurityRequest {
   string symbol = 1;
 }

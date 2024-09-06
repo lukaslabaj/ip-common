@@ -8,12 +8,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="added time precision to sum request">
+    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="added ProcessAllSecurities grpc service">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_pb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/buf.gen.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/proto/buf.gen.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/market/v1/market.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/market/v1/market.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +27,9 @@
     </option>
   </component>
   <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="master" />
+  </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
       <GitPushTagMode>
@@ -71,7 +73,11 @@
       <scope name="proto files" />
     </order>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="1kxp3TYvqb42uyiqmN7AjwqwW4A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -83,9 +89,13 @@
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lukaslabaj/IdeaProjects/ip-common/proto/shared&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lukaslabaj/IdeaProjects/ip-common/tools/protoc/bin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
@@ -94,18 +104,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/proto/shared" />
       <recent name="$PROJECT_DIR$/tools/protoc/bin" />
+      <recent name="$PROJECT_DIR$/proto/shared" />
       <recent name="$PROJECT_DIR$/proto/porfolio" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/envoy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools/protoc/bin" />
       <recent name="$PROJECT_DIR$/proto/market/v1" />
       <recent name="$PROJECT_DIR$/proto/porfolio/v1" />
       <recent name="$PROJECT_DIR$/proto/auth/v1" />
       <recent name="$PROJECT_DIR$/proto" />
-      <recent name="$PROJECT_DIR$/proto/porfolio" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,13 +125,40 @@
       </makefile>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Makefile Target.proto-gen" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="trying to fix okteto deploy (2)">
+      <option name="closed" value="true" />
+      <created>1702125187585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702125187585</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <created>1702126270246</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702126270246</updated>
+      <workItem from="1702126271486" duration="1481000" />
+      <workItem from="1723186117188" duration="1385000" />
+      <workItem from="1723211024043" duration="2820000" />
+      <workItem from="1723289776446" duration="334000" />
+      <workItem from="1725123393026" duration="76000" />
+      <workItem from="1725601227677" duration="771000" />
+    </task>
+    <task id="LOCAL-00002" summary="added ProcessAllSecurities grpc service">
+      <option name="closed" value="true" />
+      <created>1723186581198</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723186581198</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
@@ -137,12 +174,16 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="1">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -161,6 +202,7 @@
                   </entry>
                 </map>
               </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
@@ -172,7 +214,6 @@
         <entry key="c12750e4-0cae-4ef5-b4bf-048749f7d715">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -191,14 +232,10 @@
                   </entry>
                 </map>
               </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -215,7 +252,9 @@
     <MESSAGE value="fixed import path" />
     <MESSAGE value="update proto service paths" />
     <MESSAGE value="added time precision to sum request" />
-    <option name="LAST_COMMIT_MESSAGE" value="added time precision to sum request" />
+    <MESSAGE value="trying to fix okteto deploy (2)" />
+    <MESSAGE value="added ProcessAllSecurities grpc service" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ProcessAllSecurities grpc service" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

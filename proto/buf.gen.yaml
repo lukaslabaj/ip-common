@@ -27,6 +27,14 @@ plugins:
       - paths=source_relative
     strategy: directory
 
+# grpc-gateway
+  - name: grpc-gateway
+    out: ../gen/proto/go
+    opt:
+      - paths=source_relative
+      - generate_unbound_methods=true
+    strategy: directory
+
 # JS
   - name: js
     out: ../gen/proto/js
@@ -39,6 +47,20 @@ plugins:
     out: ../gen/proto/js
     opt:
       - import_style=commonjs,mode=grpcwebtext
+    strategy: directory
+
+# C#
+  - name: csharp
+    out: ../gen/proto/csharp
+#    opt:
+#      - base_namespace=pb
+    strategy: directory
+
+# C#
+  - name: csharp-grpc
+    out: ../gen/proto/csharp
+#    opt:
+#      - base_namespace=pb
     strategy: directory
 
 # Dart - maybe using later for mobile app
