@@ -8,10 +8,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="added c# &amp; grpc-gateway">
-      <change afterPath="$PROJECT_DIR$/tools/protoc/bin/protoc-gen-connect-go" afterDir="false" />
+    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="added buf connect grpc gen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/buf.gen.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/proto/buf.gen.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +148,7 @@
       <workItem from="1723289776446" duration="334000" />
       <workItem from="1725123393026" duration="76000" />
       <workItem from="1725601227677" duration="2962000" />
-      <workItem from="1725689479322" duration="3360000" />
+      <workItem from="1725689479322" duration="4529000" />
     </task>
     <task id="LOCAL-00002" summary="added ProcessAllSecurities grpc service">
       <option name="closed" value="true" />
@@ -167,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725603160213</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added buf connect grpc gen">
+      <option name="closed" value="true" />
+      <created>1725795384218</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725795384218</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +275,8 @@
     <MESSAGE value="trying to fix okteto deploy (2)" />
     <MESSAGE value="added ProcessAllSecurities grpc service" />
     <MESSAGE value="added c# &amp; grpc-gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="added c# &amp; grpc-gateway" />
+    <MESSAGE value="added buf connect grpc gen" />
+    <option name="LAST_COMMIT_MESSAGE" value="added buf connect grpc gen" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
