@@ -14,6 +14,13 @@ plugins:
 #      - require_unimplemented_servers=false
 
 # GRPC - GO
+  - name: connect-go
+    out: ../gen/proto/go
+    opt:
+      - paths=source_relative
+    strategy: directory
+
+# GRPC - GO
   - name: go-grpc
     out: ../gen/proto/go
     opt:
