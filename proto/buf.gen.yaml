@@ -13,6 +13,12 @@ plugins:
 #      - paths=source_relative
 #      - require_unimplemented_servers=false
 
+  - plugin: buf.build/connectrpc/es:v1.4.0
+    out: ../gen/proto/js
+  # dependencies
+#  - plugin: buf.build/bufbuild/es:v1.7.2
+#    out: ../gen/proto/js
+
 # GRPC - GO
   - name: connect-go
     out: ../gen/proto/go
