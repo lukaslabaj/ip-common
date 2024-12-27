@@ -8,7 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="fixing go version for buf connect grpc gen">
+    <list default="true" id="2b9ea7a4-1c8d-41c2-b82a-ce41d57b012a" name="Default Changelist" comment="buf connect es gen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/csharp/Account.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/csharp/AccountGrpc.cs" beforeDir="false" />
@@ -19,31 +19,27 @@
       <change beforePath="$PROJECT_DIR$/gen/proto/csharp/PortfolioGrpc.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/csharp/PortfolioItem.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/csharp/TimePrecision.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/auth/v1/account.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/auth/v1/account.pb.gw.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/auth/v1/account_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/auth/v1/authv1connect/account.connect.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.gw.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/marketv1connect/market.connect.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.gw.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfoliov1connect/portfolio.connect.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/shared/filter.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.gw.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/market/v1/market.pb.gw.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/market_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/market/v1/market_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/market/v1/marketv1connect/market.connect.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/market/v1/marketv1connect/market.connect.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/go/portfolio/v1/portfolio.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/go/shared/portfolio_item.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/go/shared/time_precision.pb.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/js/auth/v1/account_grpc_web_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/js/auth/v1/account_pb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/auth/v1/account_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/auth/v1/account_pb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/market/v1/market_connect.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/market/v1/market_connect.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/market/v1/market_connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/market/v1/market_connect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/js/market/v1/market_grpc_web_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/js/market/v1/market_pb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/market/v1/market_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/market/v1/market_pb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_grpc_web_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/js/shared/filter_pb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/portfolio/v1/portfolio_pb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/shared/filter_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/shared/filter_pb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/proto/js/shared/portfolio_item_pb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/js/shared/time_precision_pb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/js/shared/time_precision_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/js/shared/time_precision_pb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proto/buf.gen.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/proto/buf.gen.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/market/v1/market.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/market/v1/market.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/portfolio/v1/portfolio.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/shared/portfolio_item.proto" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
+  <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.23.0" />
   <component name="Git.Rebase.Settings">
     <option name="NEW_BASE" value="master" />
   </component>
@@ -122,10 +118,12 @@
     &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lukaslabaj/IdeaProjects/ip-common/tools/protoc/bin&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -184,7 +182,13 @@
       <workItem from="1725689479322" duration="4976000" />
       <workItem from="1725806477206" duration="973000" />
       <workItem from="1725909078311" duration="600000" />
-      <workItem from="1726075386217" duration="87000" />
+      <workItem from="1726075386217" duration="2679000" />
+      <workItem from="1726120582824" duration="3705000" />
+      <workItem from="1728713146519" duration="1792000" />
+      <workItem from="1728808247009" duration="600000" />
+      <workItem from="1729230293151" duration="791000" />
+      <workItem from="1729782377891" duration="918000" />
+      <workItem from="1735291160138" duration="3585000" />
     </task>
     <task id="LOCAL-00002" summary="added ProcessAllSecurities grpc service">
       <option name="closed" value="true" />
@@ -218,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725796895671</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="buf connect es gen">
+      <option name="closed" value="true" />
+      <created>1726075526003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726075526003</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +333,8 @@
     <MESSAGE value="added c# &amp; grpc-gateway" />
     <MESSAGE value="added buf connect grpc gen" />
     <MESSAGE value="fixing go version for buf connect grpc gen" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing go version for buf connect grpc gen" />
+    <MESSAGE value="buf connect es gen" />
+    <option name="LAST_COMMIT_MESSAGE" value="buf connect es gen" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

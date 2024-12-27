@@ -16,8 +16,8 @@ plugins:
   - plugin: buf.build/connectrpc/es:v1.4.0
     out: ../gen/proto/js
   # dependencies
-#  - plugin: buf.build/bufbuild/es:v1.7.2
-#    out: ../gen/proto/js
+  - plugin: buf.build/bufbuild/es:v1.7.2
+    out: ../gen/proto/js
 
 # GRPC - GO
   - name: connect-go
@@ -48,33 +48,33 @@ plugins:
       - generate_unbound_methods=true
     strategy: directory
 
-# JS
-  - name: js
-    out: ../gen/proto/js
-    opt:
-      - import_style=commonjs,binary
-    strategy: directory
-
-# GRPC-Web
-  - name: grpc-web
-    out: ../gen/proto/js
-    opt:
-      - import_style=commonjs,mode=grpcwebtext
-    strategy: directory
-
-# C#
-  - name: csharp
-    out: ../gen/proto/csharp
+## JS
+#  - name: js
+#    out: ../gen/proto/js
 #    opt:
-#      - base_namespace=pb
-    strategy: directory
-
-# C#
-  - name: csharp-grpc
-    out: ../gen/proto/csharp
+#      - import_style=commonjs,binary
+#    strategy: directory
+#
+## GRPC-Web
+#  - name: grpc-web
+#    out: ../gen/proto/js
 #    opt:
-#      - base_namespace=pb
-    strategy: directory
+#      - import_style=commonjs,mode=grpcwebtext
+#    strategy: directory
+
+## C#
+#  - name: csharp
+#    out: ../gen/proto/csharp
+##    opt:
+##      - base_namespace=pb
+#    strategy: directory
+#
+## C#
+#  - name: csharp-grpc
+#    out: ../gen/proto/csharp
+##    opt:
+##      - base_namespace=pb
+#    strategy: directory
 
 # Dart - maybe using later for mobile app
 #  - name: dart

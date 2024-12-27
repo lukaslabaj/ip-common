@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AddSecurityRequest, AddSecurityResponse, GetSectorDistributionRequest, GetSectorDistributionResponse, ProcessAllSecuritiesRequest, ProcessAllSecuritiesResponse } from "./market_pb.js";
+import { AddSecurityRequest, AddSecurityResponse, GetSectorDistributionRequest, GetSectorDistributionResponse, GetSecuritiesRequest, GetSecuritiesResponse, ProcessAllSecuritiesRequest, ProcessAllSecuritiesResponse } from "./market_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -37,6 +37,15 @@ export const MarketService = {
       name: "ProcessAllSecurities",
       I: ProcessAllSecuritiesRequest,
       O: ProcessAllSecuritiesResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc market.v1.MarketService.GetSecurities
+     */
+    getSecurities: {
+      name: "GetSecurities",
+      I: GetSecuritiesRequest,
+      O: GetSecuritiesResponse,
       kind: MethodKind.Unary,
     },
   }

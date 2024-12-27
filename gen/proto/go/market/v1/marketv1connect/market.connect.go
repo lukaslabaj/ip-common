@@ -42,6 +42,9 @@ const (
 	// MarketServiceProcessAllSecuritiesProcedure is the fully-qualified name of the MarketService's
 	// ProcessAllSecurities RPC.
 	MarketServiceProcessAllSecuritiesProcedure = "/market.v1.MarketService/ProcessAllSecurities"
+	// MarketServiceGetSecuritiesProcedure is the fully-qualified name of the MarketService's
+	// GetSecurities RPC.
+	MarketServiceGetSecuritiesProcedure = "/market.v1.MarketService/GetSecurities"
 )
 
 // These variables are the protoreflect.Descriptor objects for the RPCs defined in this package.
@@ -50,6 +53,7 @@ var (
 	marketServiceAddSecurityMethodDescriptor           = marketServiceServiceDescriptor.Methods().ByName("AddSecurity")
 	marketServiceGetSectorDistributionMethodDescriptor = marketServiceServiceDescriptor.Methods().ByName("GetSectorDistribution")
 	marketServiceProcessAllSecuritiesMethodDescriptor  = marketServiceServiceDescriptor.Methods().ByName("ProcessAllSecurities")
+	marketServiceGetSecuritiesMethodDescriptor         = marketServiceServiceDescriptor.Methods().ByName("GetSecurities")
 )
 
 // MarketServiceClient is a client for the market.v1.MarketService service.
@@ -57,6 +61,7 @@ type MarketServiceClient interface {
 	AddSecurity(context.Context, *connect.Request[v1.AddSecurityRequest]) (*connect.Response[v1.AddSecurityResponse], error)
 	GetSectorDistribution(context.Context, *connect.Request[v1.GetSectorDistributionRequest]) (*connect.Response[v1.GetSectorDistributionResponse], error)
 	ProcessAllSecurities(context.Context, *connect.Request[v1.ProcessAllSecuritiesRequest]) (*connect.Response[v1.ProcessAllSecuritiesResponse], error)
+	GetSecurities(context.Context, *connect.Request[v1.GetSecuritiesRequest]) (*connect.Response[v1.GetSecuritiesResponse], error)
 }
 
 // NewMarketServiceClient constructs a client for the market.v1.MarketService service. By default,
@@ -87,6 +92,12 @@ func NewMarketServiceClient(httpClient connect.HTTPClient, baseURL string, opts 
 			connect.WithSchema(marketServiceProcessAllSecuritiesMethodDescriptor),
 			connect.WithClientOptions(opts...),
 		),
+		getSecurities: connect.NewClient[v1.GetSecuritiesRequest, v1.GetSecuritiesResponse](
+			httpClient,
+			baseURL+MarketServiceGetSecuritiesProcedure,
+			connect.WithSchema(marketServiceGetSecuritiesMethodDescriptor),
+			connect.WithClientOptions(opts...),
+		),
 	}
 }
 
@@ -95,6 +106,7 @@ type marketServiceClient struct {
 	addSecurity           *connect.Client[v1.AddSecurityRequest, v1.AddSecurityResponse]
 	getSectorDistribution *connect.Client[v1.GetSectorDistributionRequest, v1.GetSectorDistributionResponse]
 	processAllSecurities  *connect.Client[v1.ProcessAllSecuritiesRequest, v1.ProcessAllSecuritiesResponse]
+	getSecurities         *connect.Client[v1.GetSecuritiesRequest, v1.GetSecuritiesResponse]
 }
 
 // AddSecurity calls market.v1.MarketService.AddSecurity.
@@ -112,11 +124,17 @@ func (c *marketServiceClient) ProcessAllSecurities(ctx context.Context, req *con
 	return c.processAllSecurities.CallUnary(ctx, req)
 }
 
+// GetSecurities calls market.v1.MarketService.GetSecurities.
+func (c *marketServiceClient) GetSecurities(ctx context.Context, req *connect.Request[v1.GetSecuritiesRequest]) (*connect.Response[v1.GetSecuritiesResponse], error) {
+	return c.getSecurities.CallUnary(ctx, req)
+}
+
 // MarketServiceHandler is an implementation of the market.v1.MarketService service.
 type MarketServiceHandler interface {
 	AddSecurity(context.Context, *connect.Request[v1.AddSecurityRequest]) (*connect.Response[v1.AddSecurityResponse], error)
 	GetSectorDistribution(context.Context, *connect.Request[v1.GetSectorDistributionRequest]) (*connect.Response[v1.GetSectorDistributionResponse], error)
 	ProcessAllSecurities(context.Context, *connect.Request[v1.ProcessAllSecuritiesRequest]) (*connect.Response[v1.ProcessAllSecuritiesResponse], error)
+	GetSecurities(context.Context, *connect.Request[v1.GetSecuritiesRequest]) (*connect.Response[v1.GetSecuritiesResponse], error)
 }
 
 // NewMarketServiceHandler builds an HTTP handler from the service implementation. It returns the
@@ -143,6 +161,12 @@ func NewMarketServiceHandler(svc MarketServiceHandler, opts ...connect.HandlerOp
 		connect.WithSchema(marketServiceProcessAllSecuritiesMethodDescriptor),
 		connect.WithHandlerOptions(opts...),
 	)
+	marketServiceGetSecuritiesHandler := connect.NewUnaryHandler(
+		MarketServiceGetSecuritiesProcedure,
+		svc.GetSecurities,
+		connect.WithSchema(marketServiceGetSecuritiesMethodDescriptor),
+		connect.WithHandlerOptions(opts...),
+	)
 	return "/market.v1.MarketService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch r.URL.Path {
 		case MarketServiceAddSecurityProcedure:
@@ -151,6 +175,8 @@ func NewMarketServiceHandler(svc MarketServiceHandler, opts ...connect.HandlerOp
 			marketServiceGetSectorDistributionHandler.ServeHTTP(w, r)
 		case MarketServiceProcessAllSecuritiesProcedure:
 			marketServiceProcessAllSecuritiesHandler.ServeHTTP(w, r)
+		case MarketServiceGetSecuritiesProcedure:
+			marketServiceGetSecuritiesHandler.ServeHTTP(w, r)
 		default:
 			http.NotFound(w, r)
 		}
@@ -170,4 +196,8 @@ func (UnimplementedMarketServiceHandler) GetSectorDistribution(context.Context, 
 
 func (UnimplementedMarketServiceHandler) ProcessAllSecurities(context.Context, *connect.Request[v1.ProcessAllSecuritiesRequest]) (*connect.Response[v1.ProcessAllSecuritiesResponse], error) {
 	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("market.v1.MarketService.ProcessAllSecurities is not implemented"))
+}
+
+func (UnimplementedMarketServiceHandler) GetSecurities(context.Context, *connect.Request[v1.GetSecuritiesRequest]) (*connect.Response[v1.GetSecuritiesResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("market.v1.MarketService.GetSecurities is not implemented"))
 }

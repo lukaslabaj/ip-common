@@ -2,12 +2,13 @@ syntax = "proto3";
 
 package market.v1;
 
-import "shared/portfolio_item.proto";
+import "shared/portfolio.proto";
 
 service MarketService {
   rpc AddSecurity(AddSecurityRequest) returns (AddSecurityResponse);
   rpc GetSectorDistribution(GetSectorDistributionRequest) returns (GetSectorDistributionResponse);
   rpc ProcessAllSecurities(ProcessAllSecuritiesRequest) returns (ProcessAllSecuritiesResponse);
+  rpc GetSecurities(GetSecuritiesRequest) returns (GetSecuritiesResponse);
 }
 
 
@@ -42,4 +43,11 @@ message ProcessAllSecuritiesRequest {
 }
 message ProcessAllSecuritiesResponse {
   string err = 1;
+}
+
+message GetSecuritiesRequest {
+}
+message GetSecuritiesResponse {
+  string err = 1;
+  repeated bytes securities_raw = 2;
 }

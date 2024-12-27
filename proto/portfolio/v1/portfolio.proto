@@ -4,9 +4,8 @@ package portfolio.v1;
 
 import "google/protobuf/timestamp.proto";
 //import "google/protobuf/empty.proto";
-
 import "shared/filter.proto";
-import "shared/portfolio_item.proto";
+import "shared/portfolio.proto";
 import "shared/time_precision.proto";
 
 service PortfolioService {
